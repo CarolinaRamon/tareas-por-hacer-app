@@ -29,8 +29,11 @@ switch (comando){
     break;
 
     case 'actualizar':
-    console.log('Actualiza una tarea por hacer.');
+    //console.log('Actualiza una tarea por hacer.');
+    let actualizado = porHacer.actualizar(argv.descripcion, argv.completado);
+    console.log(actualizado);//devuelve false: no lo grabó - devuelve true: lo grabó
     break;
+    //Comando: node app actualizar -d "Pasear al perro" -c true (en realidad es true por defecto)
 
     default:
         console.log('Comando no reconocido.');
