@@ -68,14 +68,14 @@ const actualizar = (descripcion, completado = true) => {
 const borrar = (descripcion) => {
     cargarDB();
     
-    let nuevoListado = listadoPorHacer.filter( tarea => {
-        return tarea.descripcion != descripcion
+    let nuevoListado = listadoPorHacer.filter( tarea => {//La función filter regresa un nuevo arreglo.
+        return tarea.descripcion !== descripcion//Retorna los elementos que no coinciden con la descripción.
     });
 
-    if (listadoPorHacer === nuevoListado.length){
+    if (listadoPorHacer.length === nuevoListado.length){
         return false;
     }else {
-        listadoPorHacer = nuevoListado;
+        listadoPorHacer = nuevoListado;//Porque guardarDB() guarda listadoPorHacer
         guardarDB();
         return true;
     }
