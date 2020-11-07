@@ -26,7 +26,6 @@ const cargarDB = () => {
 }
 
 
-//Función:
 const crear = (descripcion) => {
 
     cargarDB();
@@ -44,6 +43,12 @@ const crear = (descripcion) => {
     return porHacer;
 }
 
+const getListado = () => {
+    cargarDB();
+    return listadoPorHacer;
+}
+
 module.exports = {
-    crear
+    crear,
+    getListado
 }
