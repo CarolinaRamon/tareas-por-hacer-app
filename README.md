@@ -2,7 +2,7 @@
 
 ## Tareas por Hacer App
 
-Esta es una aplicación para generar listas de tareas.
+Aplicación de tareas.
 
 Recuerden instalar los paquetes de Node con:
 
